@@ -58,6 +58,7 @@ function incrementBy5() {
         pixels += 5;
         pixelsWidth.textContent = pixels;
         image.style.width = pixels+"px";
+        message.textContent = "";
     }
 }
 
@@ -68,6 +69,7 @@ function decrementBy5() {
         pixels -= 5;
         pixelsWidth.textContent = pixels;
         image.style.width = pixels+"px";
+        message.textContent = "";
     }
 }
 
