@@ -12,8 +12,7 @@ const incrementButton = document.querySelector("#incrementButton");
 
 // const pixels = document.querySelector("pixels");
 
-let pixels = pixelsWidth.textContent;
-pixels = parseInt(pixels);
+let pixels = parseInt(pixelsWidth.textContent);
 
 function warningMessage() {
     if(pixels > 300) {
@@ -25,8 +24,6 @@ function warningMessage() {
     }
 }
 
-let imageWidth;
-
 function incrementAndDecremetImageWidth(imgWidth) {
     // image
     let image = document.querySelector("#image");
@@ -35,22 +32,23 @@ function incrementAndDecremetImageWidth(imgWidth) {
 
 function incrementBy5() {
     if(pixels < 300) {
-        imageWidth = pixels += 5;
+        pixels += 5;
     }
-    pixelsWidth.textContent = imageWidth;  
-    incrementAndDecremetImageWidth(imageWidth);
+    pixelsWidth.textContent = pixels;  
+    incrementAndDecremetImageWidth(pixels);
     warningMessage();    
 }
 
 function decrementBy5() {
     if(pixels > 100) {
-        imageWidth = pixels -= 5;
+        pixels -= 5;
     }
-    pixelsWidth.textContent = imageWidth;
-    incrementAndDecremetImageWidth(imageWidth);
+    pixelsWidth.textContent = pixels;
+    incrementAndDecremetImageWidth(pixels);
     warningMessage();
 }
 
 incrementButton.addEventListener("click", incrementBy5);
 decrementButton.addEventListener("click", decrementBy5);
 
+warningMessage();
